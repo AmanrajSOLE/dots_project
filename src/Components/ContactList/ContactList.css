@@ -1,0 +1,173 @@
+
+/* Contact list */
+
+.contact-list-container {
+  background: #fff;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 2s ease;
+}
+
+.contact-list-container.active {
+  max-height: 600px; 
+  opacity: 1;
+}
+
+.contact-list-container.closing {
+min-height: 0;  opacity: 0;
+  transition: min-height 2s ease;
+}
+
+.contact-list-navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.contact-list-navbar-left {
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.count {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 2px;
+    font-size: 12px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    min-width: 20px;
+    text-align: center;
+}
+
+
+.contact-list-navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.contact-list-navbar-right img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-list {
+  width: 100%;
+  display: none;
+  transition:  transform 2s ease;
+  max-height: 530px;
+  overflow-y: auto;
+}
+
+.contact-list.active {
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.popup-menu {
+  position: absolute;
+  margin-top: 40px;
+  width: 180px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 6px 0;
+  z-index: 100;
+    opacity: 0;
+  transform: scale(0.9);
+  animation: popupFade 0.25s forwards;
+}
+
+@keyframes popupFade {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Each item row */
+.popup-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 10px;
+  font-size: 14px;
+  color: #111;
+  transition: background 0.2s;
+}
+
+.popup-item:hover {
+  background: #f7f7f7;
+}
+
+.popup-icon {
+  font-size: 16px;
+}
+
+.popup-label {
+  flex: 1;
+}
+
+.popup-item.disabled {
+  color: #aaa;
+}
+
+.popup-item.disabled .switch {
+  opacity: 0.5;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+  background-color: #000;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(16px);
+}

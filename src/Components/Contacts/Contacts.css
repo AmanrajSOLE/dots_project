@@ -1,0 +1,57 @@
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: opacity 2s ease, transform 2s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.contact-list.active .contact-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-list.closing .contact-card {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.contact-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-status {
+  font-size: 13px;
+  color: #777;
+}
+
+.contact-status.online {
+  color: #4caf50;
+}
+
+.contact-status.offline {
+  color: #f44336;
+}
+
+.contact-status.busy {
+  color: #ff9800;
+}

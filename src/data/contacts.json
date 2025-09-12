@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Aman Raj",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=1"
+  },
+  {
+    "id": 2,
+    "name": "Neha Sharma",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=2"
+  },
+  {
+    "id": 3,
+    "name": "Rohan Mehta",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=3"
+  },
+  {
+    "id": 4,
+    "name": "Sanya Kapoor",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=4"
+  },
+  {
+    "id": 5,
+    "name": "Arjun Verma",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=5"
+  },
+  {
+    "id": 6,
+    "name": "Kiran Patel",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=6"
+  },
+  {
+    "id": 7,
+    "name": "Deepak Yadav",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=7"
+  },
+  {
+    "id": 8,
+    "name": "Simran Kaur",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=8"
+  },
+  {
+    "id": 9,
+    "name": "Mohit Chauhan",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=9"
+  },
+  {
+    "id": 10,
+    "name": "Priya Reddy",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=10"
+  },
+  {
+    "id": 11,
+    "name": "Nikhil Joshi",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=11"
+  },
+  {
+    "id": 12,
+    "name": "Ananya Das",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=12"
+  },
+  {
+    "id": 13,
+    "name": "Ravi Kumar",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=13"
+  },
+  {
+    "id": 14,
+    "name": "Shreya Nair",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=14"
+  },
+  {
+    "id": 15,
+    "name": "Harsh Gupta",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=15"
+  },
+  {
+    "id": 16,
+    "name": "Ishita Malhotra",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=16"
+  },
+  {
+    "id": 17,
+    "name": "Siddharth Singh",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=17"
+  },
+  {
+    "id": 18,
+    "name": "Pooja Iyer",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=18"
+  },
+  {
+    "id": 19,
+    "name": "Varun Bansal",
+    "status": "active",
+    "image": "https://i.pravatar.cc/150?img=19"
+  },
+  {
+    "id": 20,
+    "name": "Meera Chawla",
+    "status": "inactive",
+    "image": "https://i.pravatar.cc/150?img=20"
+  }
+]
