@@ -34,7 +34,7 @@ function App() {
     <div className="app">
       <div className={`app-wrapper ${showMenu ? "scaled" : ""}`}>
         <div
-          className={`content-container ${search.length > 0 ? "active" : ""}`}
+          className={`content-container`}
         >
           <SearchBox
             value={search}
