@@ -1,24 +1,23 @@
-
 /* Contact list */
 
 .contact-list-container {
   background: #fff;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  max-height: 0;
+  height: 0; /* start closed */
   overflow: hidden;
   opacity: 0;
-  transition: max-height 2s ease;
+  transition: height 2s ease-in-out, opacity 300ms ease;
 }
 
 .contact-list-container.active {
-  max-height: 600px; 
+  height: 600px; /* final fixed height */
   opacity: 1;
 }
 
 .contact-list-container.closing {
-min-height: 0;  opacity: 0;
-  transition: min-height 2s ease;
+  height: 0;
+  opacity: 0;
 }
 
 .contact-list-navbar {
@@ -27,6 +26,7 @@ min-height: 0;  opacity: 0;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  border-bottom: 1px solid #aaa;
 }
 
 .contact-list-navbar-left {
@@ -38,16 +38,15 @@ min-height: 0;  opacity: 0;
 }
 
 .count {
-    display: inline-block;
-    margin-left: 6px;
-    padding: 2px;
-    font-size: 12px;
-    background-color: #f4f4f4;
-    border-radius: 4px;
-    min-width: 20px;
-    text-align: center;
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px;
+  font-size: 12px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  min-width: 20px;
+  text-align: center;
 }
-
 
 .contact-list-navbar-right {
   display: flex;
@@ -60,10 +59,19 @@ min-height: 0;  opacity: 0;
   height: 30px;
 }
 
+.setting-icon {
+  transition: transform 1s ease; 
+}
+
+.setting-icon.rotated {
+  transform: rotate(90deg); 
+}
+
+
 .contact-list {
   width: 100%;
   display: none;
-  transition:  transform 2s ease;
+  transition: transform 2s ease;
   max-height: 530px;
   overflow-y: auto;
 }
@@ -84,7 +92,7 @@ min-height: 0;  opacity: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 6px 0;
   z-index: 100;
-    opacity: 0;
+  opacity: 0;
   transform: scale(0.9);
   animation: popupFade 0.25s forwards;
 }

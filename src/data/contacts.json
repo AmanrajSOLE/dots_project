@@ -14,7 +14,7 @@
   {
     "id": 3,
     "name": "Rohan Mehta",
-    "status": "active",
+    "status": "away",
     "image": "https://i.pravatar.cc/150?img=3"
   },
   {
@@ -32,7 +32,7 @@
   {
     "id": 6,
     "name": "Kiran Patel",
-    "status": "inactive",
+    "status": "away",
     "image": "https://i.pravatar.cc/150?img=6"
   },
   {
@@ -50,7 +50,7 @@
   {
     "id": 9,
     "name": "Mohit Chauhan",
-    "status": "active",
+    "status": "away",
     "image": "https://i.pravatar.cc/150?img=9"
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": 14,
     "name": "Shreya Nair",
-    "status": "inactive",
+    "status": "away",
     "image": "https://i.pravatar.cc/150?img=14"
   },
   {
@@ -98,7 +98,7 @@
   {
     "id": 17,
     "name": "Siddharth Singh",
-    "status": "active",
+    "status": "away",
     "image": "https://i.pravatar.cc/150?img=17"
   },
   {
@@ -116,7 +116,7 @@
   {
     "id": 20,
     "name": "Meera Chawla",
-    "status": "inactive",
+    "status": "away",
     "image": "https://i.pravatar.cc/150?img=20"
   }
 ]

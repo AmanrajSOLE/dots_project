@@ -21,23 +21,6 @@
   border-radius: 10px;
 }
 
-@keyframes moveUp {
-  0% {
-    margin-top: 30%;
-  }
-  100% {
-    margin-top: 5%;
-  }
-}
-
-@keyframes moveDown {
-  0% {
-    margin-top: 5%;
-  }
-  100% {
-    margin-top: 30%;
-  }
-}
 
 .search-box {
   background-color: #ffff;

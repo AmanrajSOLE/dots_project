@@ -8,7 +8,12 @@ import List_icon from "../../Images/list.svg";
 import Home_icon from "../../Images/Home.svg";
 import "./ContactList.css";
 
-export default function ContactList({ contacts, isActive, showMenu, setShowMenu }) {
+export default function ContactList({
+  contacts,
+  isActive,
+  showMenu,
+  setShowMenu,
+}) {
   // Default navbar items
   const iconMap = {
     All: Home_icon,
@@ -32,7 +37,7 @@ export default function ContactList({ contacts, isActive, showMenu, setShowMenu 
         contacts.length > 0 && isActive ? "active" : "closing"
       }`}
     >
-      {contacts.length > 0 ? (
+      {isActive ? (
         <>
           <div className="contact-list-navbar">
             <div className="contact-list-navbar-left">
@@ -50,11 +55,12 @@ export default function ContactList({ contacts, isActive, showMenu, setShowMenu 
               <img
                 src={Setting}
                 alt="setting_symbol"
-                className="cursor-pointer"
+                className={`cursor-pointer setting-icon ${
+                  showMenu ? "rotated" : ""
+                }`}
                 onClick={() => setShowMenu((prev) => !prev)}
               />
 
-              {/* Popup menu */}
               {showMenu && (
                 <div className="popup-menu">
                   {allItems.map((item) => (

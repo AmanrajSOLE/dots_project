@@ -1,14 +1,22 @@
 .contact-card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
   padding: 10px 12px;
-  border-radius: 8px;
-  background: #fafafa;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   transition: opacity 2s ease, transform 2s ease;
   opacity: 0;
   transform: translateY(10px);
+  border-bottom: 1px solid #e0e0e0; /* lighter, subtle divider */
+}
+
+.contact-card:last-child {
+  border-bottom: none;
+}
+
+.contact-card:hover .contact-card-right {
+  opacity: 1;                
+  transform: translateX(0);   
 }
 
 .contact-list.active .contact-card {
@@ -16,16 +24,43 @@
   transform: translateY(0);
 }
 
-.contact-list.closing .contact-card {
-  opacity: 0;
-  transform: translateY(10px);
+.contact-card-left {
+  display: flex;
 }
 
-.contact-card img {
+.contact-image {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 25%;
   object-fit: cover;
+}
+
+.contact-image-wrapper {
+  position: relative; /* allows absolute positioning inside */
+  width: 50px;
+  height: 50px;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 3px; /* move to bottom-right */
+  right: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* circle */
+  border: 2px solid white; /* small border to separate from image */
+}
+
+/* Different colors based on status */
+.status-dot.active {
+  background-color: green;
+}
+.status-dot.inactive {
+  background-color: red;
+}
+
+.status-dot.away {
+  background-color: yellow;
 }
 
 .contact-info {
@@ -35,8 +70,7 @@
 
 .contact-name {
   font-size: 15px;
-  font-weight: 500;
-  color: #333;
+  font-weight: 600;
 }
 
 .contact-status {
@@ -44,14 +78,69 @@
   color: #777;
 }
 
-.contact-status.online {
-  color: #4caf50;
+.contact-card-right {
+  display: flex;
+  gap: 10px;
+  opacity: 0;                 
+  transform: translateX(5px); 
+  transition: all 0.3s ease;  
 }
 
-.contact-status.offline {
-  color: #f44336;
+.contact-card-right-link {
+  opacity: 0.5;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.contact-status.busy {
-  color: #ff9800;
+.contact-card-right-link:hover {
+  opacity: 1;
+  transform: scale(1.2);
 }
+
+.contact-card-right-link,
+.contact-card-right-new_tab img {
+  height: 20px;
+  width: 20px;
+}
+
+.contact-card-right-new_tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.5;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  gap: 5px;
+}
+
+.contact-card-right-new_tab:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+.link-wrapper {
+  position: relative; /* for positioning tooltip above the icon */
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -120%; /* place above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0.9;
+  pointer-events: none; /* tooltip doesn’t block clicks */
+  z-index: 10;
+}
+
